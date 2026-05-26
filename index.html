@@ -3,10 +3,13 @@
 <head>
 <title>Moon Shine Womens Hostel</title>
 
-<!-- Fonts -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Moon Shine Womens Hostel in Sholinganallur Chennai. Safe and affordable hostel with food, WiFi, security.">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -16,10 +19,9 @@ body {
 
 /* HEADER */
 .header {
-    background: url('ffadee99-b158-49a0-bb2c-6b474cb34549.jpg') no-repeat center;
-    background-size: cover;
     text-align: center;
     padding: 80px 20px;
+    background: linear-gradient(to bottom, #000000, #0b0b1a);
 }
 
 .title {
@@ -34,23 +36,25 @@ body {
     font-size: 22px;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
     background: #111;
     text-align: center;
 }
+
 nav a {
     color: white;
-    padding: 15px;
+    padding: 14px;
     display: inline-block;
     text-decoration: none;
 }
+
 nav a:hover {
     background: gold;
     color: black;
 }
 
-/* CONTENT */
+/* SECTION */
 .container {
     padding: 20px;
 }
@@ -69,31 +73,43 @@ nav a:hover {
     align-items: center;
     margin: 10px 0;
 }
+
 .facility img {
-    width: 50px;
+    width: 40px;
     margin-right: 10px;
 }
 
-/* BUTTONS */
-.whatsapp {
-    background: #25D366;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
+/* BUTTON */
+.btn {
+    background: gold;
+    color: black;
+    padding: 10px;
+    border: none;
     border-radius: 5px;
+    width: 100%;
 }
 
-/* FLOATING BUTTON */
-.float {
+/* FLOAT BUTTONS */
+.float-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 24px;
-    padding: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.whatsapp {
+    bottom: 80px;
+    background: #25D366;
+}
+
+.call {
+    bottom: 20px;
+    background: red;
 }
 
 /* MAP */
@@ -109,6 +125,7 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
 </style>
 </head>
 
@@ -117,12 +134,12 @@ footer {
 <!-- HEADER -->
 <div class="header">
     <div class="title">Moon Shine</div>
-    <div class="subtitle">WOMEN’S HOSTEL</div>
+    <div class="subtitle">🌙 WOMEN’S HOSTEL</div>
+    <p>A safe place like home ❤️</p>
 </div>
 
 <!-- NAV -->
 <nav>
-    <a href="#">Home</a>
     <a href="#rooms">Rooms</a>
     <a href="#facilities">Facilities</a>
     <a href="#contact">Contact</a>
@@ -130,53 +147,71 @@ footer {
 
 <div class="container">
 
-<h2>🌙 Welcome</h2>
-<p>A safe place like home ❤️</p>
+<!-- ROOMS -->
+<h2 id="rooms">🏠 Rooms Available</h2>
 
-<h2 id="rooms">Rooms Available</h2>
 <div class="box">2 Sharing Room</div>
 <div class="box">3 Sharing Room</div>
 <div class="box">4 Sharing Room</div>
 
-<h2 id="facilities">Facilities</h2>
+<!-- FACILITIES -->
+<h2 id="facilities">✨ Facilities</h2>
 
 <div class="facility">
-    <img src="https://img.icons8.com/ios-filled/100/fridge.png"> Fridge
-</div>
-<div class="facility">
-    <img src="https://img.icons8.com/ios-filled/100/washing-machine.png"> Washing Machine
-</div>
-<div class="facility">
-    <img src="https://img.icons8.com/ios-filled/100/cctv.png"> Security Camera
-</div>
-<div class="facility">
-    <img src="https://img.icons8.com/ios-filled/100/bed.png"> Individual Bed
-</div>
-<div class="facility">
-    <img src="https://img.icons8.com/ios-filled/100/manager.png"> Warden Support
-</div>
-<div class="facility">
-    <img src="https://img.icons8.com/ios-filled/100/meal.png"> Homely Food
+<img src="https://img.icons8.com/ios-filled/100/fridge.png"> Fridge
 </div>
 
-<h2 id="contact">Contact</h2>
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/washing-machine.png"> Washing Machine
+</div>
 
-<p>📞 <b>9988776187</b></p>
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/cctv.png"> CCTV Security
+</div>
 
-<p>📍 <b>
-Moon Shine womens hostel,<br>
-Nehru street,<br>
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/bed.png"> Individual Bed
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/manager.png"> Warden Support
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/meal.png"> Homely Food
+</div>
+
+<!-- ENQUIRY -->
+<h2>📝 Enquiry</h2>
+
+<div class="box">
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required style="width:100%; padding:10px;"><br><br>
+<input type="tel" id="phone" placeholder="Phone Number" required style="width:100%; padding:10px;"><br><br>
+<button class="btn">Submit Enquiry</button>
+</form>
+</div>
+
+<!-- CONTACT -->
+<h2 id="contact">📞 Contact</h2>
+
+<p><b>Phone:</b> 9988776187</p>
+
+<p><b>Address:</b><br>
+Moon Shine Womens Hostel,<br>
+Nehru Street,<br>
 Sholinganallur,<br>
 Chennai - 600119
-</b></p>
+</p>
 
-<a class="whatsapp" href="https://wa.me/919988776187" target="_blank">
-💬 Chat on WhatsApp
-</a>
+<p>
+<a href="https://wa.me/919988776187" class="btn">💬 Chat on WhatsApp</a>
+</p>
 
+<!-- MAP -->
 <h3>📍 Location</h3>
 
-<iframe src="https://maps.google.com/maps?q=Moon%20Shine%20Womens%20Hostel%20Sholinganallur&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=Moon%20Shine%20Womens%20Hostel%20Sholinganallur&output=embed"></iframe>
 
 <p>
 <a href="https://maps.app.goo.gl/uPMeXRijYHjNatZCA" target="_blank" style="color:gold;">
@@ -184,43 +219,26 @@ Chennai - 600119
 </a>
 </p>
 
-<!-- ENQUIRY FORM -->
-<h2>📝 Enquiry Form</h2>
-
-<div class="box">
-<form onsubmit="sendToWhatsApp(); return false;">
-
-<label>Name:</label><br>
-<input type="text" id="name" required style="width:100%; padding:10px;"><br><br>
-
-<label>Phone Number:</label><br>
-<input type="tel" id="phone" required style="width:100%; padding:10px;"><br><br>
-
-<button type="submit" style="background:gold; padding:10px; border:none; width:100%;">
-Submit Enquiry
-</button>
-
-</form>
 </div>
 
-</div>
+<!-- FLOAT BUTTONS -->
+<a href="https://wa.me/919988776187" class="float-btn whatsapp">💬</a>
+<a href="tel:9988776187" class="float-btn call">📞</a>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919988776187" class="float">💬</a>
-
+<!-- FOOTER -->
 <footer>
 © 2026 MOON SHINE WOMENS HOSTEL
 </footer>
 
 <!-- SCRIPT -->
 <script>
-function sendToWhatsApp() {
+function sendWhatsApp() {
     var name = document.getElementById("name").value;
     var phone = document.getElementById("phone").value;
 
-    var message = "New Enquiry:%0AName: " + name + "%0APhone: " + phone;
+    var msg = "New Hostel Enquiry:%0AName: " + name + "%0APhone: " + phone;
 
-    var url = "https://wa.me/919988776187?text=" + message;
+    var url = "https://wa.me/919988776187?text=" + msg;
 
     window.open(url, "_blank");
 
@@ -230,4 +248,3 @@ function sendToWhatsApp() {
 
 </body>
 </html>
-``
