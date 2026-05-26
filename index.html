@@ -5,10 +5,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
@@ -16,21 +17,29 @@ body {
     color:white;
 }
 
+/* HEADER WITH LOGO STYLE */
 .header {
     text-align:center;
-    padding:60px;
+    padding:80px 20px;
+    background: linear-gradient(to bottom, #000000, #0b0b1a);
 }
 
 .title {
-    font-size:50px;
+    font-family:'Playfair Display', serif;
+    font-size:60px;
     color:gold;
-    font-family:'Playfair Display';
+    text-shadow:
+        0 0 10px gold,
+        0 0 20px orange,
+        0 0 40px goldenrod;
 }
 
 .subtitle {
     color:pink;
+    font-size:20px;
 }
 
+/* NAV */
 nav {
     background:#111;
     text-align:center;
@@ -48,6 +57,7 @@ nav a:hover {
     color:black;
 }
 
+/* SECTION */
 .container {
     padding:20px;
 }
@@ -56,32 +66,61 @@ nav a:hover {
     background:#1a1a2e;
     border:1px solid gold;
     padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+}
+
+/* FACILITIES */
+.facility {
+    display:flex;
+    align-items:center;
     margin:10px 0;
 }
 
-/* Floating Buttons */
-.float {
- position:fixed;
- right:20px;
- width:50px;
- height:50px;
- text-align:center;
- line-height:50px;
- color:white;
- border-radius:50%;
+.facility img {
+    width:40px;
+    margin-right:10px;
 }
 
-.whatsapp { bottom:80px; background:#25D366; }
-.call { bottom:20px; background:red; }
-
-iframe { width:100%; height:300px; border:0; }
-
+/* BUTTON */
 button {
     background:gold;
     padding:10px;
     width:100%;
     border:none;
+    border-radius:5px;
 }
+
+/* FLOAT BUTTONS */
+.float {
+    position:fixed;
+    right:15px;
+    width:50px;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    border-radius:50%;
+    color:white;
+    font-size:22px;
+}
+
+.whatsapp { bottom:80px; background:#25D366; }
+.call { bottom:20px; background:red; }
+
+/* MAP */
+iframe {
+    width:100%;
+    height:300px;
+    border:0;
+}
+
+/* FOOTER */
+footer {
+    background:black;
+    text-align:center;
+    padding:10px;
+}
+
 </style>
 </head>
 
@@ -89,59 +128,95 @@ button {
 
 <!-- HEADER -->
 <div class="header">
-<h1 class="title">Moon Shine</h1>
-<p class="subtitle">🌙 Women’s Hostel</p>
+    <div class="title">MOON SHINE</div>
+    <div class="subtitle">🌙 WOMEN’S HOSTEL</div>
+    <p>Safe • Comfortable • Homely Stay</p>
 </div>
 
 <!-- NAV -->
 <nav>
 <a href="#rooms">Rooms</a>
+<a href="#facilities">Facilities</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-<h2 id="rooms">Rooms</h2>
-<div class="box">2 Sharing</div>
-<div class="box">3 Sharing</div>
-<div class="box">4 Sharing</div>
+<!-- ROOMS -->
+<h2 id="rooms">🏠 Rooms</h2>
+<div class="box">2 Sharing Room</div>
+<div class="box">3 Sharing Room</div>
+<div class="box">4 Sharing Room</div>
+
+<!-- FACILITIES -->
+<h2 id="facilities">✨ Facilities</h2>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/fridge.png">
+Fridge
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/washing-machine.png">
+Washing Machine
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/cctv.png">
+Security Camera
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/bed.png">
+Individual Bed
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/manager.png">
+Warden Support
+</div>
+
+<div class="facility">
+<img src="https://img.icons8.com/ios-filled/100/meal.png">
+Homely Food
+</div>
 
 <!-- ENQUIRY -->
 <h2>Quick Enquiry</h2>
 <div class="box">
-<form onsubmit="sendWhatsApp();return false;">
-<input id="qname" placeholder="Name" required style="width:100%;padding:10px;"><br><br>
-<input id="qphone" placeholder="Phone" required style="width:100%;padding:10px;"><br><br>
+<form onsubmit="sendWhatsApp(); return false;">
+<input id="qname" placeholder="Name" required style="width:100%; padding:10px;"><br><br>
+<input id="qphone" placeholder="Phone" required style="width:100%; padding:10px;"><br><br>
 <button>Submit</button>
 </form>
 </div>
 
-<!-- APPLICATION FORM -->
-<h2>Customer Application</h2>
+<!-- APPLICATION -->
+<h2>📋 Customer Application</h2>
 <div class="box">
-<form onsubmit="submitApplication();return false;">
+<form onsubmit="submitApplication(); return false;">
 
-<input id="name" placeholder="Name" required style="width:100%;padding:10px;"><br><br>
+<input id="name" placeholder="Name" required style="width:100%; padding:10px;"><br><br>
 
-<input type="date" id="dob" required style="width:100%;padding:10px;"><br><br>
+<input type="date" id="dob" required style="width:100%; padding:10px;"><br><br>
 
-<input id="phone" placeholder="Contact Number" required style="width:100%;padding:10px;"><br><br>
+<input id="phone" placeholder="Contact Number" required style="width:100%; padding:10px;"><br><br>
 
-<input id="emergency" placeholder="Emergency Number" required style="width:100%;padding:10px;"><br><br>
+<input id="emergency" placeholder="Emergency Number" required style="width:100%; padding:10px;"><br><br>
 
-<textarea id="address" placeholder="Address" style="width:100%;padding:10px;"></textarea><br><br>
+<textarea id="address" placeholder="Address" style="width:100%; padding:10px;"></textarea><br><br>
 
 <label>
 <input type="radio" name="stay" value="Day" checked> Day
-<input type="radio" name="stay" value="Long stay"> Long Stay
+<input type="radio" name="stay" value="Long Stay"> Long Stay
 </label><br><br>
 
-<select id="branch" style="width:100%;padding:10px;">
+<select id="branch" style="width:100%; padding:10px;">
 <option>Moon Shine - Nehru St</option>
 <option>Moon Shine - 2</option>
 </select><br><br>
 
-<input id="room" placeholder="Room Number" style="width:100%;padding:10px;"><br><br>
+<input id="room" placeholder="Room Number" style="width:100%; padding:10px;"><br><br>
 
 <button>Submit Application</button>
 
@@ -149,24 +224,25 @@ button {
 </div>
 
 <!-- CONTACT -->
-<h2 id="contact">Contact</h2>
-<p>📞 9988776187</p>
+<h2 id="contact">📞 Contact</h2>
+
+<p><b>Phone:</b> 9988776187</p>
 
 <p>
 Moon Shine Womens Hostel,<br>
-Nehru Street,<br>
+Nehru street,<br>
 Sholinganallur,<br>
 Chennai - 600119
 </p>
 
-<a href="https://wa.me/919988776187" target="_blank">💬 WhatsApp</a>
+<p>
+<a href="https://wa.me/919988776187" target="_blank">💬 Chat on WhatsApp</a>
+</p>
 
-<h3>Location</h3>
+<!-- MAP -->
+<h3>📍 Location</h3>
 
 <iframe src="https://maps.google.com/maps?q=Moon%20Shine%20Womens%20Hostel%20Sholinganallur&output=embed"></iframe>
-
-<br><br>
-<a href="https://maps.app.goo.gl/uPMeXRijYHjNatZCA" target="_blank">Open Map</a>
 
 </div>
 
@@ -175,13 +251,11 @@ Chennai - 600119
 <a href="tel:9988776187" class="float call">📞</a>
 
 <footer>
-<p>© 2026 Moon Shine Womens Hostel</p>
+© 2026 MOON SHINE WOMENS HOSTEL
 </footer>
 
 <!-- SCRIPT -->
 <script>
-
-// enquiry
 function sendWhatsApp(){
  let name=document.getElementById("qname").value;
  let phone=document.getElementById("qphone").value;
@@ -189,37 +263,19 @@ function sendWhatsApp(){
  let msg="Enquiry:%0AName:"+name+"%0APhone:"+phone;
  window.open("https://wa.me/919988776187?text="+msg);
 
- alert("We will contact you");
+ alert("✅ We will contact you soon");
 }
 
-// application + PDF
 function submitApplication(){
-
  let name=document.getElementById("name").value;
- let dob=document.getElementById("dob").value;
  let phone=document.getElementById("phone").value;
- let emergency=document.getElementById("emergency").value;
- let address=document.getElementById("address").value;
- let branch=document.getElementById("branch").value;
- let room=document.getElementById("room").value;
- let stay=document.querySelector('input[name="stay"]:checked').value;
 
- let msg="Application:%0AName:"+name+"%0ADOB:"+dob+"%0APhone:"+phone+"%0AEmergency:"+emergency+"%0AStay:"+stay;
+ let msg="Application:%0AName:"+name+"%0APhone:"+phone;
+
  window.open("https://wa.me/919988776187?text="+msg);
 
- let text =
- "MOON SHINE HOSTEL\n\n"+
- "Name:"+name+"\nDOB:"+dob+"\nPhone:"+phone+"\nEmergency:"+emergency+"\nAddress:"+address+"\nBranch:"+branch+"\nRoom:"+room;
-
- let blob=new Blob([text],{type:"application/pdf"});
- let link=document.createElement("a");
- link.href=URL.createObjectURL(blob);
- link.download=name+"_form.pdf";
- link.click();
-
- alert("Application submitted!");
+ alert("✅ Application submitted");
 }
-
 </script>
 
 </body>
